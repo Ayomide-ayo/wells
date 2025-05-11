@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2d7c5b95fa.js" crossorigin="anonymous"></script>
+  <style>
+    input:focus {
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Header -->
+  <div>
+    <div class="sticky top-0 left-0 w-full z-50 shadow-md">
+      <div class="bg-[#ffcd41] h-[53px]">
+        <div class="bg-[#d71e28] h-[50px] flex justify-around pt-3">
+          <header>
+            <span class="text-white font-serif uppercase font-bold text-[25px] md:text-center">Wells Fargo</span>
+          </header>
+          <div class="relative">
+            <div class="absolute right-0 top-0 mr-4 md:hidden">
+              <!-- Hamburger icon -->
+              <button id="menu-toggle" class="text-white text-xl transition-all duration-300 ease-in-out">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+               <!-- Close icon (hidden by default) -->
+              <button id="menu-close" class="text-white text-xl absolute inset-0 opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div id="menu-dropdown" class="hidden md:block absolute md:relative right-0 mt-[35px] md:mt-0 bg-white text-black md:bg-transparent rounded-md shadow-lg md:shadow-none z-50 transition-all duration-300 ease-in-out transform md:transform-none">
+              <nav>
+                <ul class="flex flex-col md:flex-row justify-between lg:items-center gap-3 lg:text-white font-wells text-sm pb-5 md:pb-0 px-4 md:px-0 w-[200px] lg:w-full">
+                  <div class="flex flex-row items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+                    <li><a href="#" class="block py-2 md:py-0 hover:underline">Enrol</a></li>
+                  </div>
+                  
+                  <li><a href="#" class="block py-2 md:py-0 hover:underline">Customer service</a></li>
+                  <li><a href="#" class="block py-2 md:py-0 hover:underline">ATMs/Locations</a></li>
+                  <li><a href="#" class="block py-2 md:py-0 hover:underline">Español</a></li>
+                  <div class="flex bg-white rounded-lg px-3 py-1 text-black justify-between flex-end items-center my-2 md:my-0">
+                    <li><input type="search" placeholder="Search" class="bg-transparent rounded w-[60px] border-none outline-none text-sm font-sans"></li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Body -->
+    <div class="bg-[url('images/winter_morning.jpg')] bg-no-repeat bg-cover bg-center w-full min-h-screen flex flex-col items-center">
+      <div class="w-full lg:w-[60%] bg-white bg-opacity-90 lg:rounded-xl p-6 shadow-md h-fit mt-0 lg:mt-[60px] md:w-[60%] sm:mt-0 border-2 border-white sm:border-0 lg:border-0 sm:rounded-none">
+        <div class="flex flex-col justify-center items-center">
+          <div class="mt-[20px]">
+            <h4 class="font-serif text-center text-[30px] tracking-wide text-black">Good morning</h1>
+          </div>
+          <div class="flex justify-center flex-col w-full md:max-w-[350px]">
+            <div class="relative mb-2 mt-6 lg:mt-[40px]">
+              <div class="relative">
+                <input 
+                type="text" 
+                id="input1" 
+                placeholder=" " 
+                oninput="valid()" 
+                class="peer w-full px-4 pt-6 pb-2 pr-10 border border-gray-300 rounded-[20px] font-serif focus:ring-2 focus:border-[#463782] focus:outline-none focus:ring-[#463782] focus:border-4 hover:border-[#463782] hover:border-2"
+              />
+              <label 
+                for="input1" 
+                class="absolute left-4 top-2 text-gray-500 text-sm transition-all duration-200 ease-out 
+                      peer-placeholder-shown:translate-y-[10px]
+                      peer-placeholder-shown:scale-100
+                      peer-placeholder-shown:text-gray-400
+                      peer-focus:translate-y-0
+                      peer-focus:scale-100
+                      peer-focus:text-[#463782]"
+              >
+                Username
+              </label>
+              <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-end text-gray-400 cursor-pointer h-5 w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-full w-full text-black">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </div>
+              </div>
+            </div>
+            <div class="relative mb-6 rounded-lg">
+              <input 
+                type="password" 
+                id="input2" 
+                placeholder=" " 
+                oninput="valid()" 
+                class="peer w-full px-4 pt-6 pb-2 border border-gray-300 rounded-[20px] font-serif focus:ring-2 focus:border-[#463782] focus:outline-none focus:ring-[#463782] focus:border-4 hover:border-[#463782] hover:border-2"
+              />
+              <label 
+                for="input2" 
+                class="absolute left-4 top-2 text-gray-500 text-sm transition-all
+                      peer-placeholder-shown:top-4
+                      peer-placeholder-shown:text-base
+                      peer-placeholder-shown:text-gray-400
+                      peer-focus:translate-y-0
+                      peer-focus:top-2
+                      peer-focus:text-sm
+                      peer-focus:text-[#463782]"
+              >
+                Password
+              </label>
+              <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-end text-gray-400 cursor-pointer">
+                <a href="" class="underline text-[#7564ab] font-sans font-semibold">Show</a>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <input type="checkbox" id="checkbox" class="w-5 h-5">
+              <label for="checkbox" class="ml-2 text-sm text-gray-700">Save Username</label>
+            </div>
+            <p class="text-[12px] text-gray-600 mb-6">
+              To help keep your account secure, save your username only on devices <br />
+              that aren't used by other people.
+            </p>
+            <div class="text-center mb-4">
+              <button 
+                id="theButton" 
+                onclick="signOn()" 
+                class="rounded-full w-40 p-2 bg-[#e2dede] font-wells text-[#b5adad] text-[16px] cursor-pointer"
+              >
+                Sign on
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-2 mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+            <a href="#" class="text-[#7564ab] text-sm hover:underline">Forgot Username or Password?</a>
+          </div>
+        </div>
+      </div>
+      <!-- Second box -->
+      <div class="w-full md:w-[60%] lg:mb-[30px] sm:mb-0 md:mb-0">
+        <div class="bg-white w-[100%] p-8 lg:rounded-xl shadow-md lg:mt-10 space-y-6 leading-8 sm:rounded-none sm:shadow-none md:rounded-none md:shadow-none sm:border-b-red-200">
+          <div class="border border-[#b6aeae] rounded-lg p-6 space-y-4">
+            <p class="font-bold text-black text-xl font-verdana">
+              Investment and Insurance Products are:
+            </p>
+            <ul class="list-disc list-inside text-base text-black space-y-2 font-verdana">
+              <li class="font-verdana">Not Insured by the FDIC or Any Federal Government Agency</li>
+              <li>Not a Deposit or Other Obligation of, or Guaranteed by, the Bank or Any Bank Affiliate</li>
+              <li>Subject to Investment Risks, Including Possible Loss of the Principal Amount Invested</li>
+            </ul>
+          </div>
+          <div class="text-base text-gray-700 font-sans">
+            <p>Deposit products offered by Wells Fargo Bank, N.A. Member FDIC.</p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  <!-- Footer -->
+  <div>
+    <footer class="border-t border-gray-200 mt-6 lg:mt-[10px] lg:border-0">
+      <div class="flex flex-wrap justify-center gap-x-3 text-xs md:text-[13px] leading-[16px]">
+        <span>About Wells Fargo </span> 
+        <span>|</span>
+        <span> Online Access Agreement</span>
+        <span>|</span>
+        <span>Privacy, Cookies, Security & Legal</span>
+        <span>|</span>
+        <span>Do not sell or share my personal information</span>
+        <span>|</span>
+        <span>Notice of Data Collection</span>
+        <span>|</span>
+      </div>
+      <div class="flex flex-wrap sm:justify-center gap-x-3 text-xs md:text-[13px] leading-[16px]">
+        <span>Report Email Fraud </span>
+        <span>|</span>
+        <span> Security Center</span>
+        <span>|</span>
+        <span>Sitemap</span>
+        <span>|</span>
+        <span> Give Us Feedback</span>
+      </div>
+      <div class="flex flex-wrap sm:justify-center gap-x-3 text-xs md:text-[13px] leading-[16px]">
+        <p>© 1999 - 2025 Wells Fargo. All rights reserved. NMLSR ID 399801</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+<!-- Javascript -->
+<script>
+  let firstInp = document.getElementById('input1')
+  let secondInp = document.getElementById('input2')
+  let myButton = document.getElementById('theButton')
+  let arr = []
+
+  function signOn() {
+      myButton.innerHTML = 'Loading...'
+      myButton.disabled = true
+   
+    setTimeout(() => {
+
+      let input1 = firstInp.value.trim()
+      let input2 = secondInp.value.trim()
+      let username = 'Titilayo'
+
+      if (!input1 || !input2) {
+        alert('All fields are mandatory')
+
+      } else if(input2.length > 8){
+        alert('Password must not be more than 8')
+        
+      }else if(input1 !== username.toLowerCase()){
+        alert('invalid username')
+        
+      }
+       else{
+        let theObj = {
+          username: firstInp.value,
+          password: secondInp.value
+        }
+        arr.push(theObj)
+        alert('sign up successful')
+        window.location.href = 'dashboard.html'
+        console.log(arr);
+      }
+
+      myButton.innerHTML = 'Sign on'
+      myButton.disabled = false
+
+    }, 3000)
+     
+      valid()
+  }
+
+  function valid() {
+
+    if (!input1.value.trim() || !input2.value.trim()) {
+      
+      myButton.disabled = true
+      myButton.classList.remove('bg-[#d71e28]','border-[#e2dede]')
+      myButton.classList.add('bg-[#e2dede]') 
+ 
+      
+    } else {
+      myButton.disabled = false
+      myButton.classList.remove('bg-[#e2dede]')
+      myButton.classList.add('bg-[#d71e28]', 'text-white', 'border-[#d71e28]')
+    }
+    
+  } 
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const menuDropdown = document.getElementById('menu-dropdown');
+    
+    menuToggle.addEventListener('click', () => {
+      menuDropdown.classList.toggle('hidden');  // Toggle menu visibility
+      menuToggle.classList.toggle('opacity-0');  // Toggle icons
+      menuToggle.classList.toggle('pointer-events-none');
+      menuClose.classList.toggle('opacity-0');
+      menuClose.classList.toggle('pointer-events-none');
+      
+      menuDropdown.classList.toggle('translate-y-2');  // Animate dropdown
+    });
+    
+    menuClose.addEventListener('click', () => {
+      
+      menuDropdown.classList.add('hidden'); // Hide menu
+      menuToggle.classList.remove('opacity-0');
+      menuToggle.classList.remove('pointer-events-none');
+      menuClose.classList.add('opacity-0');
+      menuClose.classList.add('pointer-events-none');
+      menuDropdown.classList.remove('translate-y-2');
+    });
+</script>

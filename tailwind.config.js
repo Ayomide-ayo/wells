@@ -12,7 +12,7 @@
 // }
 // tailwind.config.js
 export default {
-  content: ["./src/index.html"],
+  content: ["./public/index.html"],
   theme: {
     extend: {
       fontFamily: {

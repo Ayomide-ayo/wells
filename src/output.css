@@ -224,6 +224,9 @@
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -335,6 +338,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -352,6 +358,9 @@
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -544,11 +553,17 @@
   .bg-\[\#ffcd41\] {
     background-color: #ffcd41;
   }
+  .bg-\[url\(\'https\:\/\/example\.com\/path\/to\/image\.jpg\'\)mpn\] {
+    background-color: url('https://example.com/path/to/image.jpg')mpn;
+  }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .bg-transparent {
     background-color: transparent;
@@ -567,6 +582,9 @@
   }
   .bg-\[url\(\'dist\/images\/winter_morning\.jpg\'\)\] {
     background-image: url('dist/images/winter_morning.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/example\.com\/path\/to\/image\.jpg\'\)\] {
+    background-image: url('https://example.com/path/to/image.jpg');
   }
   .bg-\[url\(\'images\/winter_morning\.jpg\'\)\] {
     background-image: url('images/winter_morning.jpg');

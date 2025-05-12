@@ -284,9 +284,6 @@
   .mt-\[20px\] {
     margin-top: 20px;
   }
-  .mt-\[30px\] {
-    margin-top: 30px;
-  }
   .mt-\[35px\] {
     margin-top: 35px;
   }
@@ -304,9 +301,6 @@
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
-  }
-  .ml-\[20px\] {
-    margin-left: 20px;
   }
   .block {
     display: block;
@@ -356,20 +350,11 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
-  .w-\[20p\] {
-    width: 20p;
-  }
   .w-\[60px\] {
     width: 60px;
   }
   .w-\[100\%\] {
     width: 100%;
-  }
-  .w-\[100px\] {
-    width: 100px;
-  }
-  .w-\[200p\] {
-    width: 200p;
   }
   .w-\[200px\] {
     width: 200px;
@@ -525,15 +510,6 @@
   }
   .border-white {
     border-color: var(--color-white);
-  }
-  .bg-\[\#\#463782\] {
-    background-color: ##463782;
-  }
-  .bg-\[\#463782\] {
-    background-color: #463782;
-  }
-  .bg-\[\#d41e28\] {
-    background-color: #d41e28;
   }
   .bg-\[\#d71e28\] {
     background-color: #d71e28;
@@ -818,16 +794,6 @@
       color: #463782;
     }
   }
-  .peer-focus\:text-blue-500 {
-    &:is(:where(.peer):focus ~ *) {
-      color: var(--color-blue-500);
-    }
-  }
-  .focus-within\:block {
-    &:focus-within {
-      display: block;
-    }
-  }
   .hover\:border-2 {
     &:hover {
       @media (hover: hover) {
@@ -840,13 +806,6 @@
     &:hover {
       @media (hover: hover) {
         border-color: #463782;
-      }
-    }
-  }
-  .hover\:bg-blue-700 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-700);
       }
     }
   }
@@ -879,11 +838,6 @@
       --tw-ring-color: #463782;
     }
   }
-  .focus\:ring-blue-500 {
-    &:focus {
-      --tw-ring-color: var(--color-blue-500);
-    }
-  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
@@ -898,11 +852,6 @@
   .sm\:mb-0 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .sm\:w-\[200px\] {
-    @media (width >= 40rem) {
-      width: 200px;
     }
   }
   .sm\:justify-center {
@@ -947,34 +896,9 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
-  .md\:mt-3 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 3);
-    }
-  }
-  .md\:mt-\[20px\] {
-    @media (width >= 48rem) {
-      margin-top: 20px;
-    }
-  }
-  .md\:mt-\[20pz\] {
-    @media (width >= 48rem) {
-      margin-top: 20pz;
-    }
-  }
-  .md\:mt-\[50px\] {
-    @media (width >= 48rem) {
-      margin-top: 50px;
-    }
-  }
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:ml-\[100px\] {
-    @media (width >= 48rem) {
-      margin-left: 100px;
     }
   }
   .md\:block {
@@ -992,16 +916,6 @@
       width: 60%;
     }
   }
-  .md\:w-\[100px\] {
-    @media (width >= 48rem) {
-      width: 100px;
-    }
-  }
-  .md\:w-\[200px\] {
-    @media (width >= 48rem) {
-      width: 200px;
-    }
-  }
   .md\:max-w-\[350px\] {
     @media (width >= 48rem) {
       max-width: 350px;
@@ -1017,20 +931,9 @@
       flex-direction: row;
     }
   }
-  .md\:justify-between {
-    @media (width >= 48rem) {
-      justify-content: space-between;
-    }
-  }
   .md\:rounded-none {
     @media (width >= 48rem) {
       border-radius: 0;
-    }
-  }
-  .md\:border-t {
-    @media (width >= 48rem) {
-      border-top-style: var(--tw-border-style);
-      border-top-width: 1px;
     }
   }
   .md\:bg-transparent {
@@ -1063,20 +966,10 @@
       font-size: 13px;
     }
   }
-  .md\:text-black {
-    @media (width >= 48rem) {
-      color: var(--color-black);
-    }
-  }
   .md\:shadow-none {
     @media (width >= 48rem) {
       --tw-shadow: 0 0 #0000;
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .lg\:mt-0 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * 0);
     }
   }
   .lg\:mt-10 {
@@ -1089,19 +982,9 @@
       margin-top: 10px;
     }
   }
-  .lg\:mt-\[20px\] {
-    @media (width >= 64rem) {
-      margin-top: 20px;
-    }
-  }
   .lg\:mt-\[40px\] {
     @media (width >= 64rem) {
       margin-top: 40px;
-    }
-  }
-  .lg\:mt-\[50px\] {
-    @media (width >= 64rem) {
-      margin-top: 50px;
     }
   }
   .lg\:mt-\[60px\] {

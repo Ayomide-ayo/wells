@@ -562,6 +562,9 @@
   .bg-\[url\(\'\.\/public\/images\/winter_morning\.jpg\'\)\] {
     background-image: url('./public/images/winter_morning.jpg');
   }
+  .bg-\[url\(\'\/images\/winter_morning\.jpg\'\)\] {
+    background-image: url('/images/winter_morning.jpg');
+  }
   .bg-\[url\(\'dist\/images\/winter_morning\.jpg\'\)\] {
     background-image: url('dist/images/winter_morning.jpg');
   }

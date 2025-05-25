@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./dist/output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2d7c5b95fa.js" crossorigin="anonymous"></script>
   <style>
     input:focus {
@@ -207,9 +207,9 @@
    
     setTimeout(() => {
 
-      let input1 = firstInp.value.trim()
+      let input1 = firstInp.value.trim().toLowerCase()
       let input2 = secondInp.value.trim()
-      let username = 'Titilayo'
+      let username = 'Mariah'
 
       if (!input1 || !input2) {
         alert('All fields are mandatory')
@@ -217,7 +217,7 @@
       } else if(input2.length > 8){
         alert('Password must not be more than 8')
         
-      }else if(input1 !== username.toLowerCase()){
+      }else if(input1.toLowerCase() !== username.toLowerCase()){
         alert('invalid username')
         
       }

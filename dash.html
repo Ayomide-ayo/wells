@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2d7c5b95fa.js" crossorigin="anonymous"></script>
+  <style>
+    input:focus {
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Header -->
+  <div  class="w-full overflow-x-hidden">
+    <div class="sticky top-0 left-0 w-full z-50 shadow-md">
+      <div class="bg-[#ffcd41] h-[53px]">
+        <div class="bg-[#d71e28] h-[50px] flex justify-around pt-3">
+          <header>
+            <span class="text-white font-serif uppercase font-bold text-lg sm:text-[25px]">Wells Fargo</span>
+          </header>
+          <div class="relative">
+              <nav>
+                <ul class="flex flex-row md:flex-row justify-between lg:items-center gap-3 lg:text-white font-wells text-sm pb-0 sm:pb-7 px-0 sm:px-4 w-[200px] lg:w-full">
+                  <div class="flex flex-row items-center gap-[20px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M9.539 15.23q-2.398 0-4.065-1.666Q3.808 11.899 3.808 9.5t1.666-4.065T9.539 3.77t4.064 1.666T15.269 9.5q0 1.042-.369 2.017t-.97 1.668l5.909 5.907q.14.14.15.345q.009.203-.15.363q-.16.16-.354.16t-.354-.16l-5.908-5.908q-.75.639-1.725.989t-1.96.35m0-1q1.99 0 3.361-1.37q1.37-1.37 1.37-3.361T12.9 6.14T9.54 4.77q-1.991 0-3.361 1.37T4.808 9.5t1.37 3.36t3.36 1.37"/></svg>
+                    <li><a href="#" class="block py-0 sm:py-2 hover:underline">|</a></li>
+                  </div>
+                  
+                  <li class="hidden sm:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6.256V17.25a2.25 2.25 0 0 1-2.25 2.25H4.25A2.25 2.25 0 0 1 2 17.25V6.204A1.736 1.736 0 0 1 3.737 4.5h16.528c.959 0 1.736.777 1.736 1.735zM3.5 8.187v9.063c0 .414.336.75.75.75h15.5a.75.75 0 0 0 .75-.75V8.187l-7.213 5.03c-.773.54-1.8.54-2.574 0zm17-1.958A.236.236 0 0 0 20.264 6H3.736a.236.236 0 0 0-.135.429l7.97 5.558c.258.18.6.18.858 0l7.97-5.558a.24.24 0 0 0 .101-.186V6.23"/></svg></li>
+                  <li><a href="#" class="py-0 md:py-2 hover:underline hidden sm:block">|</a></li>
+                  <div class="flex justify-evenly" onclick="logout()">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 -2 24 24">
+                      <path fill="currentColor" d="M2 9.528V4a4 4 0 1 1 8 0v5.528a6 6 0 1 1-8 0M4 8.34A6 6 0 0 1 6 8c.701 0 1.374.12 2 .341V4a2 2 0 1 0-4 0v4.341zM6 16a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
+                    </svg></li>
+                    <li><a href="#" class="py-2 md:py-0 hover:underline hidden sm:block">Sign Off</a></li>
+                  </div>
+                  <li><a href="#" class="block py-2 md:py-0 hover:underline">|</a></li>
+                  <div class="flex justify-between gap-[10px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="currentColor" d="M16 7.992C16 3.58 12.416 0 8 0S0 3.58 0 7.992c0 2.43 1.104 4.62 2.832 6.09c.016.016.032.016.032.032c.144.112.288.224.448.336c.08.048.144.111.224.175A8 8 0 0 0 8.016 16a8 8 0 0 0 4.48-1.375c.08-.048.144-.111.224-.16c.144-.111.304-.223.448-.335c.016-.016.032-.016.032-.032c1.696-1.487 2.8-3.676 2.8-6.106m-8 7.001c-1.504 0-2.88-.48-4.016-1.279c.016-.128.048-.255.08-.383a4.2 4.2 0 0 1 .416-.991c.176-.304.384-.576.64-.816c.24-.24.528-.463.816-.639c.304-.176.624-.304.976-.4A4.2 4.2 0 0 1 8 10.342a4.18 4.18 0 0 1 2.928 1.166q.552.552.864 1.295q.168.432.24.911A7.03 7.03 0 0 1 8 14.993m-2.448-7.4a2.5 2.5 0 0 1-.208-1.024c0-.351.064-.703.208-1.023s.336-.607.576-.847s.528-.431.848-.575s.672-.208 1.024-.208c.368 0 .704.064 1.024.208s.608.336.848.575c.24.24.432.528.576.847c.144.32.208.672.208 1.023c0 .368-.064.704-.208 1.023a2.8 2.8 0 0 1-.576.848a2.8 2.8 0 0 1-.848.575a2.72 2.72 0 0 1-2.064 0a2.8 2.8 0 0 1-.848-.575a2.5 2.5 0 0 1-.56-.848zm7.424 5.306c0-.032-.016-.048-.016-.08a5.2 5.2 0 0 0-.688-1.406a4.9 4.9 0 0 0-1.088-1.135a5.2 5.2 0 0 0-1.04-.608a3 3 0 0 0 .464-.383a4.2 4.2 0 0 0 .624-.784a3.6 3.6 0 0 0 .528-1.934a3.7 3.7 0 0 0-.288-1.47a3.8 3.8 0 0 0-.816-1.199a3.9 3.9 0 0 0-1.2-.8a3.7 3.7 0 0 0-1.472-.287a3.7 3.7 0 0 0-1.472.288a3.6 3.6 0 0 0-1.2.815a3.8 3.8 0 0 0-.8 1.199a3.7 3.7 0 0 0-.288 1.47q0 .528.144 1.007c.096.336.224.64.4.927c.16.288.384.544.624.784q.216.216.48.383a5 5 0 0 0-1.04.624c-.416.32-.784.703-1.088 1.119a5 5 0 0 0-.688 1.406c-.016.032-.016.064-.016.08C1.776 11.636.992 9.91.992 7.992C.992 4.14 4.144.991 8 .991s7.008 3.149 7.008 7.001a6.96 6.96 0 0 1-2.032 4.907"/></svg>
+                    <li><p class="mt-[5px] hidden sm:block">Welcome, Mariah</p></li>
+                  </div>
+                  <li class="hidden sm:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z" />
+                  </svg></li>
+                </ul>
+              </nav>
+            
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bg-white w-full flex justify-center items-center p-2 sm:p-3">
+          <ul class="flex justify-between gap-[10px] sm:gap-[43px]">
+            <div class="flex text-[10px] sm:text-[16px]">
+              <li class="text-[10px] sm:text-[16px]">Accounts</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z" />
+              </svg></li>
+            </div>
+            <li>|</li>
+            <li class="text-[10px] sm:text-[16px]">Brokage</li>
+            <li>|</li>
+            <div class="flex text-[10px] sm:text-[16px]">
+              <li>Transfer & Pay</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z" />
+              </svg></li>
+            </div>
+            <li>|</li>
+            <div class="flex text-[10px] sm:text-[16px]">
+              <li>Plan & Learn</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z" />
+              </svg></li>
+            </div>
+            <li>|</li>
+          
+            <div class="flex text-[10px] sm:text-[16px]" >
+              
+              <li>Security & Support</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z" />
+              </svg></li>
+            </div>
+          </ul>
+        </div>
+        <hr>
+      </div>
+      <div>
+        <div class="bg-[#e6e6e3] w-full h-[40px]">
+          <ul class="flex gap-2">
+            <li class="ml-[50px] mt-[12px]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="currentColor" d="M416 174.74V48h-80v58.45L256 32L0 272h64v208h144V320h96v160h144V272h64z"/></svg></li>
+            <li class="mt-[8px] text-[16px]"><p>Account Summary</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="background-image: url('images/winter_morning.jpg')" class="bg-no-repeat bg-cover bg-center w-full min-h-screen flex justify-center items-center">
+      <div class="bg-white w-full lg:w-[50%] h-fit px-4 lg:px-0">
+        <div class="flex flex-col sm:flex-row justify-between sm:justify-evenly items-start sm:items-center gap-4 sm:gap-0">
+          <div class="flex gap-[190px]">
+             <p class="mt-[15px] font-sans text-[20px] sm:text-[25px] text-[#707780]">Account Summary</p>
+             <li class="block sm:hidden mt-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6.256V17.25a2.25 2.25 0 0 1-2.25 2.25H4.25A2.25 2.25 0 0 1 2 17.25V6.204A1.736 1.736 0 0 1 3.737 4.5h16.528c.959 0 1.736.777 1.736 1.735zM3.5 8.187v9.063c0 .414.336.75.75.75h15.5a.75.75 0 0 0 .75-.75V8.187l-7.213 5.03c-.773.54-1.8.54-2.574 0zm17-1.958A.236.236 0 0 0 20.264 6H3.736a.236.236 0 0 0-.135.429l7.97 5.558c.258.18.6.18.858 0l7.97-5.558a.24.24 0 0 0 .101-.186V6.23"/></svg></li>
+          </div>
+         
+          <div class=" justify-start sm:justify-evenly gap-3 mt-[15px] hidden sm:flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="mt-[6px]">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065" />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+              </g>
+            </svg>
+            <p class="text-[#7294ac] text-sm sm:text-base">Customize</p>
+            <div class="flex justify-evenly gap-3">
+              <span>|</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="mt-[6px]">
+                <path fill="currentColor" d="M0 1h3v2H0zm0 4h3v2H0zm0 4h3v2H0zm0 4h3v2H0zM4 1h12v2H4zm0 4h12v2H4zm0 4h12v2H4zm0 4h12v2H4z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="mt-[6px]">
+                <path fill="currentColor" d="M0 1h16v2H0zm0 4h16v2H0zm0 4h16v2H0zm0 4h16v2H0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-center items-center px-2 sm:px-0">
+          <div class="bg-white w-full max-w-[850px] h-auto lg:h-[190px] rounded-lg shadow-2xl mt-[20px]">
+            <div>
+              <div class="flex flex-col lg:flex-row">
+                <div class="w-[6px] lg:h-[50px] h-[30px] bg-red-600 hidden sm:block"></div>
+                <div class="flex flex-col lg:flex-row lg:justify-evenly lg:gap-[250px] flex-1 p-4 lg:p-0">
+                  <div class="flex gap-[10px] lg:ml-[15px] mb-4 lg:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 256 256" class="mt-[3px] flex-shrink-0">
+                      <path fill="currentColor" d="M128 88a40 40 0 1 0 40 40a40 40 0 0 0-40-40m0 64a24 24 0 1 1 24-24a24 24 0 0 1-24 24m112-96H16a8 8 0 0 0-8 8v128a8 8 0 0 0 8 8h224a8 8 0 0 0 8-8V64a8 8 0 0 0-8-8m-46.35 128H62.35A56.78 56.78 0 0 0 24 145.65v-35.3A56.78 56.78 0 0 0 62.35 72h131.3A56.78 56.78 0 0 0 232 110.35v35.3A56.78 56.78 0 0 0 193.65 184M232 93.37A40.8 40.8 0 0 1 210.63 72H232ZM45.37 72A40.8 40.8 0 0 1 24 93.37V72ZM24 162.63A40.8 40.8 0 0 1 45.37 184H24ZM210.63 184A40.8 40.8 0 0 1 232 162.63V184Z" />
+                    </svg>
+                    <div>
+                      <p class="text-[#ae1e23] font-semibold text-[14px] lg:text-[16px]">EVERYDAY CHECKING</p>
+                      <span class="text-sm lg:text-base">...1056</span>
+                    </div>
+                    <div>
+                      <div class="w-[25px] lg:w-full h-[50px] lg:h-[70px] justify-center items-center lg:ml-[53px] text-black flex sm:hidden ml-[120px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 256 256">
+                          <path fill="currentColor" d="M112 60a16 16 0 1 1 16 16a16 16 0 0 1-16-16m16 52a16 16 0 1 0 16 16a16 16 0 0 0-16-16m0 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lg:ml-[50px] flex flex-col lg:block justify-center  ">
+                    <p class="text-lg lg:text-xl"><span class="text-[10px] mt-[10px]">$</span>1,518,000</p>
+                    <span class="text-sm lg:text-base">Available Balance</span>
+                  </div>
+                </div>
+                <div class="w-full lg:w-[25px] h-[50px] lg:h-[70px] bg-[#696b6e] justify-center items-center lg:ml-[53px] text-white hidden sm:flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+                    <path fill="currentColor" d="M112 60a16 16 0 1 1 16 16a16 16 0 0 1-16-16m16 52a16 16 0 1 0 16 16a16 16 0 0 0-16-16m0 68a16 16 0 1 0 16 16a16 16 0 0 0-16-16" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex justify-center items-center p-4 lg:p-0">
+              <div class="w-full max-w-[500px] h-auto lg:h-[90px] rounded-lg flex flex-col sm:flex-row gap-[10px] mt-[5px] shadow p-4 lg:p-0">
+                <div class="bg-[#e1e2fc] w-[40px] h-[40px] rounded-[50%] flex justify-center items-center lg:ml-[20px] lg:mt-[25px] flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                    <path fill="#d8143c" d="M20.5 19.53h-1.917V5.665c0-1.51-1.251-2.695-2.75-2.695h-1.161a1.75 1.75 0 0 0-1.85-1.211l-.2.032l-6.611 1.44a.75.75 0 0 0-.591.733V5.61l-.003.058V19.53H3.5a.75.75 0 0 0 0 1.5H7l.077-.004q.03-.003.062-.01l5.483 1.193l.2.032a1.75 1.75 0 0 0 1.85-1.21H20.5l.077-.005a.75.75 0 0 0 0-1.492zM17.083 5.665V19.53H14.75V4.47h1.083c.71 0 1.25.553 1.25 1.195m-6.833 5.36a.75.75 0 0 1 1.5 0v1.95a.75.75 0 0 1-1.5 0z" />
+                  </svg>
+                </div>
+                <div class="lg:mt-[25px] flex-1">
+                  <p class="text-sm lg:text-base">It's time to put money in your account</p>
+                  <p class="text-[#786ea4] mt-[8px] text-sm lg:text-base">Add money now</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-center items-center px-2 sm:px-0">
+          <div class="bg-white w-full max-w-[750px] h-auto lg:h-[235px] rounded-lg mt-[20px] p-4 lg:p-0">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
+              <div class="flex mt-[10px] lg:ml-[20px] items-center gap-2">
+                <p class="font-serif text-sm lg:text-base">My Wells Fargo Deals</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 32 32">
+                  <path fill="#000" d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12s12-5.383 12-12S22.617 4 16 4m0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16S10.465 6 16 6m0 4c-2.2 0-4 1.8-4 4h2c0-1.117.883-2 2-2s2 .883 2 2a1.78 1.78 0 0 1-1.219 1.688l-.406.124A2.02 2.02 0 0 0 15 17.72V19h2v-1.281l.406-.125A3.81 3.81 0 0 0 20 14c0-2.2-1.8-4-4-4m-1 10v2h2v-2z" />
+                </svg>
+              </div>
+              <p class="underline mt-[10px] lg:mr-[20px] text-sm lg:text-base"><a href="">More Deals (9+)</a></p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row justify-center mt-[20px] gap-[10px] py-[10px]">
+              <div class="border-2 border-gray-200 flex w-full lg:w-1/3 h-[100px] lg:h-[128px] rounded-lg">
+                <div class="flex gap-[10px] w-full">
+                  <div class="w-20 lg:w-auto flex-shrink-0">
+                    <img src="images/01.1000172770.jpg" alt="" class="rounded-l-lg h-full w-full object-cover">
+                  </div>
+                  <div class="overflow-hidden text-ellipsis flex flex-col justify-center flex-1 p-2">
+                    <div>
+                      <p class="text-[11px] lg:text-[12.5px] truncate">5% cash back</p>
+                      <span class="mt-[5px] text-[10px] lg:text-[12px]">Expires 08/22/25</span>
+                    </div>
+                    <div class="flex gap-[3px] mt-[10px] text-[12px] lg:text-[14px]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="#000" d="M7 12h4V8h1v4h4v1h-4v4h-1v-4H7zm4.5-9a9.5 9.5 0 0 1 9.5 9.5a9.5 9.5 0 0 1-9.5 9.5A9.5 9.5 0 0 1 2 12.5A9.5 9.5 0 0 1 11.5 3m0 1A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 11.5 4" />
+                      </svg>
+                      <p>Activate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="border-2 border-gray-200 flex w-full lg:w-1/3 h-[100px] lg:h-[128px] rounded-lg bg-white">
+                <div class="flex gap-[10px] lg:gap-[15px] w-full">
+                  <div class="w-20 lg:w-auto flex-shrink-0">
+                    <img src="images/01.1000172114.jpg" alt="" class="rounded-l-lg h-full w-full object-cover">                 
+                  </div>
+                  <div class="overflow-hidden text-ellipsis flex flex-col justify-center flex-1 p-2">
+                    <div>
+                      <p class="text-[11px] lg:text-[12.5px]">5% cash back</p>
+                      <span class="mt-[5px] text-[10px] lg:text-[12px]">Expires 08/22/25</span>
+                    </div>
+                    <div class="flex gap-[3px] mt-[10px] text-[12px] lg:text-[14px]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="#000" d="M7 12h4V8h1v4h4v1h-4v4h-1v-4H7zm4.5-9a9.5 9.5 0 0 1 9.5 9.5a9.5 9.5 0 0 1-9.5 9.5A9.5 9.5 0 0 1 2 12.5A9.5 9.5 0 0 1 11.5 3m0 1A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 11.5 4" />
+                      </svg>
+                      <p>Activate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="border-2 border-gray-200 flex w-full lg:w-1/3 h-[100px] lg:h-[128px] rounded-lg bg-white">
+                <div class="flex gap-[10px] lg:gap-[15px] w-full">
+                  <div class="w-20 lg:w-auto flex-shrink-0">
+                    <img src="images/01.1000169540.jpg" alt="" class="rounded-l-lg h-full w-full object-cover">
+                  </div>
+                  <div class="overflow-hidden text-ellipsis flex flex-col justify-center flex-1 p-2">
+                    <div>
+                      <p class="text-[11px] lg:text-[12.5px]">5% cash back</p>
+                      <span class="mt-[5px] text-[10px] lg:text-[12px]">Expires 08/22/25</span>
+                    </div>
+                    <div class="flex gap-[3px] mt-[10px] text-[12px] lg:text-[14px]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="#000" d="M7 12h4V8h1v4h4v1h-4v4h-1v-4H7zm4.5-9a9.5 9.5 0 0 1 9.5 9.5a9.5 9.5 0 0 1-9.5 9.5A9.5 9.5 0 0 1 2 12.5A9.5 9.5 0 0 1 11.5 3m0 1A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 11.5 4" />
+                      </svg>
+                      <p>Activate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="underline ml-[10px] lg:ml-[10px]">
+              <p class="text-sm lg:text-base"><a href="">Terms and Conditions</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="w-full max-w-[650px] mx-auto mt-[10px]">
+        
+        <div class="px-4 lg:ml-[45px] mt-[25px] mb-[20px] gap-[10px]">
+          <div>
+            <p class="text-[14px] lg:text-[16px] leading-[10px]">Account Disclosure</p>
+            <p class="mt-[10px] text-sm lg:text-base">Deposit products offered by Wells Fargo bank, N.A Member FDIC</p>
+            <div class="flex gap-[4px] mt-[10px] items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="mt-[3px] flex-shrink-0">
+                <path fill="#000000" d="m16 9.226l-8-6.21l-8 6.21V6.694l8-6.21l8 6.21zM14 9v6h-4v-4H6v4H2V9l6-4.5z" />
+              </svg>
+              <p class="text-sm lg:text-base">Equal Housing Lender</p>
+            </div>
+            <p class="mt-[10px] mb-[20px] lg:mb-[340px] text-sm lg:text-base">FICO is a registered trademark of Fair Isaac Corporation in the United States and other countries</p>
+          </div>
+        </div> 
+      </div>
+      <div class="hidden sm:block">
+        <div>
+          <img src="images/Zelle-in-the-Wells-Fargo-Mobile-app-newQR-English.png" alt="">
+        </div>
+        <div class="bg-black w-[300px] h-fit">
+          <div class="text-white flex gap-[5px] bg-[#4a4b4f]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" class="mt-[9px] ml-[20px] text-[#c5a01f]">
+              <path fill="currentColor" d="M14 16.59L11.41 14L10 15.41l4 4l8-8L20.59 10z" />
+              <path fill="currentColor" d="m16 30l-6.176-3.293A10.98 10.98 0 0 1 4 17V4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v13a10.98 10.98 0 0 1-5.824 9.707ZM6 4v13a8.99 8.99 0 0 0 4.766 7.942L16 27.733l5.234-2.79A8.99 8.99 0 0 0 26 17V4Z" />
+            </svg>
+            <p class="text-[16px] mt-[9px] mb-[10px]">Security Tools</p>
+          </div>
+          <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#c5a01f]">
+          <div>
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Visit the Security Center </a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[80px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+            <hr class="w-[264px] h-[20px] text-[#8f8f8f] mt-[10px] ml-[30px] ">
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Manage your mobile number</a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[50px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+          </div>
+          <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#606167] mt-[10px]">
+          <div class="text-white flex gap-[5px] bg-[#4a4b4f] p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class=" ml-[20px] text-[#c5a01f]">
+              <path fill="#c5a01f" d="M10.5 15.25A.74.74 0 0 1 10 15l-3-3a.75.75 0 0 1 1-1l2.47 2.47L19 5a.75.75 0 0 1 1 1l-9 9a.74.74 0 0 1-.5.25" />
+              <path fill="#c5a01f" d="M12 21a9 9 0 0 1-7.87-4.66a8.7 8.7 0 0 1-1.07-3.41a9 9 0 0 1 4.6-8.81a8.7 8.7 0 0 1 3.41-1.07a8.9 8.9 0 0 1 3.55.34a.75.75 0 1 1-.43 1.43a7.6 7.6 0 0 0-3-.28a7.4 7.4 0 0 0-2.84.89a7.5 7.5 0 0 0-2.2 1.84a7.42 7.42 0 0 0-1.64 5.51a7.4 7.4 0 0 0 .89 2.84a7.5 7.5 0 0 0 1.84 2.2a7.42 7.42 0 0 0 5.51 1.64a7.4 7.4 0 0 0 2.84-.89a7.5 7.5 0 0 0 2.2-1.84a7.42 7.42 0 0 0 1.64-5.51a.75.75 0 1 1 1.57-.15a9 9 0 0 1-4.61 8.81A8.7 8.7 0 0 1 12.93 21z" />
+            </svg>
+            <p class="text-[16px]">Planning & Tools</p>
+          </div>
+          <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#c5a01f]">
+          <div>
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Manage spending with LifeSync®</a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[35px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+            <hr class="w-[264px] h-[20px] text-[#8f8f8f] mt-[10px] ml-[30px] ">
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Calculate debt-to-income ratio</a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[50px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+            <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#606167] mt-[10px]">
+            <div class="text-white flex gap-[9px] bg-[#4a4b4f] p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" class="ml-[20px]">
+                <g fill="none" stroke="#c5a01f" stroke-width="3">
+                  <path stroke-linejoin="round" d="M3 24a21 21 0 1 0 42 0a21 21 0 1 0-42 0" />
+                  <path stroke-linejoin="round" d="M15 24a9 21 0 1 1 18 0a9 21 0 1 1-18 0" />
+                  <path stroke-linecap="round" d="M4.5 31h39m-39-14h39" />
+                </g>
+              </svg>
+              <p class="text-[16px]">Service Offers</p>
+            </div>
+            <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#c5a01f]">
+          </div>
+          <div>
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Homeownership tools for you </a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[55px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+            <hr class="w-[264px] h-[20px] text-[#8f8f8f] mt-[10px] ml-[30px] ">
+            <div class="flex gap-[25px] text-white">
+              <p class="hover:underline ml-[30px] text-[13px]"><a href="">Manage spending with LifeSync®</a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[35px]">
+                <defs>
+                  <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                </defs>
+                <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+              </svg>
+            </div>
+          </div>
+          <hr class="w-[300px] h-[20px] flex justify-center items-center text-[#606167] mt-[10px]">
+          <div class="text-white flex gap-[9px] bg-[#4a4b4f] p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256" class="ml-[20px]">
+              <path fill="#c5a01f" d="M228.81 114.89L164.5 91.5l-23.39-64.31a13.95 13.95 0 0 0-26.22 0L91.5 91.5l-64.31 23.39a13.95 13.95 0 0 0 0 26.22L91.5 164.5l23.39 64.31a13.95 13.95 0 0 0 26.22 0l23.39-64.31l64.31-23.39a13.95 13.95 0 0 0 0-26.22m-4.1 15l-66.94 24.34a6 6 0 0 0-3.59 3.59l-24.34 66.94a2 2 0 0 1-3.68 0l-24.34-66.94a6 6 0 0 0-3.59-3.59l-66.94-24.39a2 2 0 0 1 0-3.68l66.94-24.34a6 6 0 0 0 3.59-3.59l24.34-66.94a2 2 0 0 1 3.68 0l24.34 66.94a6 6 0 0 0 3.59 3.59l66.94 24.34a2 2 0 0 1 0 3.68Z" />
+            </svg>
+            <p class="text-[16px]">Give us Feedback</p>
+          </div>
+          <div class="flex gap-[25px] text-white mt-[20px]">
+            <p class="hover:underline ml-[30px] text-[13px]"><a href="">Help us improve your experience</a></p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" class="text-[#8f8f8f] mt-[2px] ml-[40px]">
+              <defs>
+                <path id="SVG1pzpbdYY" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+              </defs>
+              <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div>
+      <footer class="border-t border-gray-200 mt-6 lg:mt-[10px] lg:border-0">
+        <div class="ml-[30px] sm:ml-[200px]">
+          <h2>Wells Fargo Online®</h2>
+        </div>
+        <div class="flex flex-wrap gap-x-3 text-xs md:text-[13px] leading-[16px] mt-[10px] ml-[30px] sm:ml-[200px]">
+          <span>Privacy, Cookies, Security & Legal</span>
+          <span>|</span>
+          <span>Notice of Data Collection</span>
+          <span>|</span>
+          <span>Do not sell or share my personal information</span>          
+        </div>
+        <div class="flex flex-wrap gap-x-3 text-xs md:text-[13px] leading-[16px] mt-[10px] ml-[30px] sm:ml-[200px]">
+          <span>Onine Access Agreement </span>
+          <span>|</span>
+          <span> Give Us Feedback</span>
+          <span>|</span>
+          <span>Contact Us</span>
+          <span>|</span>
+          <span> Locations</span>
+          <span>|</span>
+          <div class="flex justify-evenly list-none" onclick="logout()">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 -2 24 24">
+              <path fill="currentColor" d="M2 9.528V4a4 4 0 1 1 8 0v5.528a6 6 0 1 1-8 0M4 8.34A6 6 0 0 1 6 8c.701 0 1.374.12 2 .341V4a2 2 0 1 0-4 0v4.341zM6 16a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
+            </svg></li>
+            <li><a href="#" class="block py-2 md:py-0 hover:underline">Sign Off</a></li>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>    
+</html>   
+<script>
+  function logout() {
+    window.location.href = 'index.html'
+  }
+</script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Greeting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center transition-all duration-1000" id="body">
+    <div class="text-center p-8 rounded-lg shadow-lg transition-all duration-1000" id="greetingCard">
+        <!-- Main greeting text -->
+        <h1 class="text-6xl font-bold mb-4 transition-all duration-500" id="greetingText">
+            Good Morning
+        </h1>
+        
+        <!-- Current time display -->
+        <p class="text-xl mb-6" id="currentTime">
+            Loading time...
+        </p>
+        
+        <!-- Icon that changes based on time -->
+        <div class="text-8xl mb-6" id="timeIcon">
+            ☀️
+        </div>
+        
+        <!-- Explanation of current time period -->
+        <p class="text-lg italic" id="timeExplanation">
+            It's currently morning time
+        </p>
+        
+        <!-- Button to manually refresh -->
+        <button onclick="updateGreeting()" class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+            Refresh Greeting
+        </button>
+    </div>
+
+    <script>
+        function updateGreeting() {
+            // Get current date and time
+            const now = new Date();
+            const currentHour = now.getHours();
+            
+            // Get DOM elements
+            const greetingText = document.getElementById('greetingText');
+            const currentTime = document.getElementById('currentTime');
+            const timeIcon = document.getElementById('timeIcon');
+            const timeExplanation = document.getElementById('timeExplanation');
+            const body = document.getElementById('body');
+            const greetingCard = document.getElementById('greetingCard');
+            
+            // Variables to store our greeting data
+            let greeting, icon, explanation, bgClass, cardClass, textClass;
+            
+            // Determine time period and set appropriate content
+            if (currentHour >= 5 && currentHour < 12) {
+                // Morning: 5 AM to 11:59 AM
+                greeting = "Good Morning";
+                icon = "☀️";
+                explanation = "It's currently morning time";
+                bgClass = "bg-gradient-to-br from-yellow-200 to-orange-300";
+                cardClass = "bg-white/80 backdrop-blur-sm border border-yellow-300";
+                textClass = "text-orange-800";
+                
+            } else if (currentHour >= 12 && currentHour < 17) {
+                // Afternoon: 12 PM to 4:59 PM
+                greeting = "Good Afternoon";
+                icon = "🌞";
+                explanation = "It's currently afternoon time";
+                bgClass = "bg-gradient-to-br from-blue-200 to-cyan-300";
+                cardClass = "bg-white/80 backdrop-blur-sm border border-blue-300";
+                textClass = "text-blue-800";
+                
+            } else if (currentHour >= 17 && currentHour < 21) {
+                // Evening: 5 PM to 8:59 PM
+                greeting = "Good Evening";
+                icon = "🌅";
+                explanation = "It's currently evening time";
+                bgClass = "bg-gradient-to-br from-purple-300 to-pink-300";
+                cardClass = "bg-white/80 backdrop-blur-sm border border-purple-300";
+                textClass = "text-purple-800";
+                
+            } else {
+                // Night: 9 PM to 4:59 AM
+                greeting = "Good Night";
+                icon = "🌙";
+                explanation = "It's currently night time";
+                bgClass = "bg-gradient-to-br from-gray-800 to-blue-900";
+                cardClass = "bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-white";
+                textClass = "text-blue-200";
+            }
+            
+            // Update the greeting text
+            greetingText.textContent = greeting;
+            greetingText.className = `text-6xl font-bold mb-4 transition-all duration-500 ${textClass}`;
+            
+            // Update the current time display
+            currentTime.textContent = now.toLocaleString();
+            
+            // Update the icon
+            timeIcon.textContent = icon;
+            
+            // Update the explanation
+            timeExplanation.textContent = explanation;
+            
+            // Update background and card styling
+            body.className = `min-h-screen flex items-center justify-center transition-all duration-1000 ${bgClass}`;
+            greetingCard.className = `text-center p-8 rounded-lg shadow-lg transition-all duration-1000 ${cardClass}`;
+            
+            // Log the current hour for debugging
+            console.log(`Current hour: ${currentHour}, Greeting: ${greeting}`);
+        }
+        
+        // Update greeting when page loads
+        updateGreeting();
+        
+        // Update greeting every minute
+        setInterval(updateGreeting, 60000);
+        
+        // Optional: Update every second for real-time clock
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('currentTime').textContent = now.toLocaleString();
+        }, 1000);
+    </script>
+</body>
+</html>

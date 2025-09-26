@@ -63,7 +63,7 @@
       <div class="w-full lg:w-[60%] bg-white bg-opacity-90 lg:rounded-xl p-6 shadow-md h-fit mt-0 lg:mt-[60px] md:w-[60%] sm:mt-0 border-2 border-white sm:border-0 lg:border-0 sm:rounded-none">
         <div class="flex flex-col justify-center items-center">
           <div class="mt-[20px]">
-            <h4 class="font-serif text-center text-[30px] tracking-wide text-black">Good morning</h1>
+            <h4 class="font-serif text-center text-[30px] tracking-wide text-black" id="greetingText">Good morning</h1>
           </div>
           <div class="flex justify-center flex-col w-full md:max-w-[350px]">
             <div class="relative mb-2 mt-6 lg:mt-[40px]">
@@ -210,17 +210,20 @@
 
       let input1 = firstInp.value.trim().toLowerCase()
       let input2 = secondInp.value.trim()
-      let username = 'Mariah'
+      let username = 'Steven1222@'
+      let password = 'jessica1012'
 
       if (!input1 || !input2) {
         alert('All fields are mandatory')
 
-      } else if(input2.length > 8){
-        alert('Password must not be more than 8')
+      } else if(input2.length > 12){
+        alert('Password must not be more than 12')
         
       }else if(input1.toLowerCase() !== username.toLowerCase()){
         alert('invalid username')
         
+      }else if(input2 !== password){
+        alert('Incorrect password')
       }
        else{
         let theObj = {
@@ -229,7 +232,7 @@
         }
         arr.push(theObj)
         alert('sign up successful')
-        window.location.href = 'dashboard.html'
+        window.location.href = 'dash.html'
         console.log(arr);
       }
 
@@ -280,4 +283,32 @@
       menuClose.classList.add('pointer-events-none');
       menuDropdown.classList.remove('translate-y-2');
     });
+
+    function updateGreeting() {
+      const now = new Date();
+      const currentHour = now.getHours();
+
+      let greeting = document.getElementById('greetingText')
+
+      if (currentHour >= 5 && currentHour < 12) {
+        //5 AM to 11:59 AM
+        greeting = "Good Morning"
+      } else if( currentHour >= 12 && currentHour < 17) {
+        // 12 PM to 4:59 PM
+        greeting = "Good Afternoon"
+      } else if(currentHour >= 17 && currentHour < 21) {
+        // 5 PM to 8:59 PM
+        greeting = "Good Evening"
+      } else {
+        // 9 PM to 4:59 AM
+        greeting = "Good Night"
+      }
+
+      greetingText.textContent = greeting;
+      
+
+      console.log(`Current hour: ${currentHour}, Greeting: ${greeting}`);
+    }
+
+    updateGreeting()
 </script>
